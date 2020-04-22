@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}Welcome!
+			{% endblock %}
+		</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"> {% block stylesheets %}{% endblock %}
+		<style>
+			.grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				grid-gap: 20px;
+			}
+			.filter {
+				display: block;
+				position: sticky;
+				top: 20px
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-dark bg-primary">
+			<a href="/" class="navbar-brand mb-0 h1">Commerce</a>
+		</nav>
+		<div style="margin-top: 3rem;"> {% block body %}{% endblock %}
+			</div>
+
+			{% block javascripts %}{% endblock %}
+		</body>
+	</html>
