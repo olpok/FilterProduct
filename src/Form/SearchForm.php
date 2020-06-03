@@ -28,6 +28,7 @@ class SearchForm extends AbstractType
                 'label' => false,
                 'required' => false,
                 'class' => Category::Class,
+                'choice_label'=> 'name',
                 'expanded' => true,
                 'multiple' => true
             ])
